@@ -1,0 +1,11 @@
+digraph G {
+
+    ImagePairs [label="Calibrated Image Pairs"]; 
+    SameLine_Correspondences [label="Dense Correspondences \n on the same line"]; 
+    DSI [label="DSI"]; 
+    
+    ImagePair_Correspondences_SameLineFinder [label="Dense Corresp Finder \n on the Same Line", shape=box]; 
+    Compute_DSI [label="Compute DSI", shape=box]; 
+    
+    ImagePairs -> ImagePair_Correspondences_SameLineFinder -> SameLine_Correspondences -> Compute_DSI -> DSI;  
+}
